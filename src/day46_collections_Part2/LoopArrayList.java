@@ -1,0 +1,44 @@
+package day46_collections_Part2;
+
+import java.util.*;
+
+public class LoopArrayList {
+
+	public static void main(String[] args) {
+		List<Integer> nums = new ArrayList<>();
+		nums.add(50);
+		nums.add(540);
+		nums.add(5115);
+		nums.add(550);
+		nums.add(90);
+		nums.add(30);
+		nums.add(20);
+		nums.add(10);
+		
+		//Loop using for each loop
+		
+		for( int n: nums) {
+			
+			System.out.print(n+ "|");
+		}
+		System.out.println();
+		
+		for(int i=0; i<nums.size(); i++) {
+			
+		System.out.print(nums.get(i)+ "|");
+		}
+		System.out.println();
+		
+		//loop using forEach method.
+		//Lambda Expression.
+		
+		nums.forEach(n -> System.out.print(n+ "|")); // Everthing is the same only easier way.
+		System.out.println();
+		
+		nums.removeIf(n -> n<500);
+		nums.forEach(n -> System.out.print(n+"|"));
+		
+
+	}
+
+}
